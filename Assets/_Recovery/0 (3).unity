@@ -119,7 +119,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &221908553
+--- !u!1 &23201722
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -127,8 +127,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 221908554}
-  - component: {fileID: 221908555}
+  - component: {fileID: 23201724}
+  - component: {fileID: 23201723}
   m_Layer: 0
   m_Name: ZombieSpawner
   m_TagString: Untagged
@@ -136,28 +136,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &221908554
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 221908553}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.68364, y: 3.09, z: 18.42}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &221908555
+--- !u!114 &23201723
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 221908553}
+  m_GameObject: {fileID: 23201722}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5dd1e42c0fd772247937a875f9b2bdec, type: 3}
@@ -167,6 +152,21 @@ MonoBehaviour:
   _spawnRange: 15
   _zombiePrefab: {fileID: 3174499722321229443, guid: 5ff46cbeb0041b344bed30bb20f86eb6, type: 3}
   _carTransform: {fileID: 1682043032}
+--- !u!4 &23201724
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 23201722}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.99318, y: 0.26181, z: 20.36413}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &268552537
 GameObject:
   m_ObjectHideFlags: 0
@@ -876,7 +876,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: fbb5a13cb421094438148f5d1148d740, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: bbd2457a36b86e64b8ee0cde05dce2ef, type: 2}
   m_BuildHeightMesh: 0
 --- !u!1 &924675250
 GameObject:
@@ -1020,7 +1020,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: 434d411cd6fba58459c19e3a9aa678a1, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: ef1d47687b287844595992162915720a, type: 2}
   m_BuildHeightMesh: 0
 --- !u!1 &1162137683
 GameObject:
@@ -1476,7 +1476,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: 80f37c348eb75324e8e9d523407790b6, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: adc375ec441f1fa4ba4c4803eeeb45ce, type: 2}
   m_BuildHeightMesh: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
@@ -1486,4 +1486,4 @@ SceneRoots:
   - {fileID: 832575519}
   - {fileID: 1393922954}
   - {fileID: 564024766}
-  - {fileID: 221908554}
+  - {fileID: 23201724}
