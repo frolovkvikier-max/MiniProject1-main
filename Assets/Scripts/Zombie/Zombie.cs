@@ -4,12 +4,20 @@ using UnityEngine.UI;
 
 public class Zombie : MonoBehaviour
 {
+    enum ZombieState
+    {
+        Idle, Agro
+    }
+    private ZombieState state;
+
     [SerializeField] private Image _healthBar;
     float maxHealth = 1;
     float currentHealth;
 
     [SerializeField] private float _wanderRangeMax = 6f;
     [SerializeField] private float _wanderRangeMin = 1.5f;
+
+    [SerializeField] private float _agroDistance;
 
     [SerializeField]
     private NavMeshAgent _agent;
@@ -32,9 +40,21 @@ public class Zombie : MonoBehaviour
             return;
         }
 
-        if (!_agent.pathPending && _agent.remainingDistance <= 0.02f)
+        if (state == ZombieState.Idle)
         {
-            Wander();
+            if (!_agent.pathPending && _agent.remainingDistance <= 0.02f)
+            {
+                Wander();
+            }
+        }
+        if (Vector3.Distance(_spawner.CarTransfrom.position, transform.position) <= _agroDistance)
+        {
+
+        }
+        else if(state == ZombieState.Idle)
+        {
+            _agent.speed = 5f;
+            _agent.SetDestination(_spawner.CarTransfrom.position);
         }
     }
 
@@ -43,6 +63,8 @@ public class Zombie : MonoBehaviour
         _zombiePool = zombiePool;
         _spawnPoint = spawnPoint;
         _spawner = spawner;
+
+        state = ZombieState.Idle;
 
         currentHealth = maxHealth;
         _healthBar.fillAmount = 1;
